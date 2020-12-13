@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 lab</title>
+    <link rel="stylesheet" href="/css/1lab.css">
+</head>
+
+<body>
+    <div class="header-block" id="head">
+        <p class="text-name">17 лабараторная работа</p>
+    </div>
+
+    <div class="w"></div>
+    <div class="h"></div>
+
+    <div class="tasks">
+        <div class="task">
+            <h3>Задание 1</h3>
+            <p>В переменной min лежит число от 0 до 59. Определите в какую четверть часа попадает это число (в первую,
+                вторую, третью или четвертую)
+            </p>
+
+            <label for="task">Введите число: </label><input id="input1" placeholder=" от 0 до 59" type="number"
+                name="task1" max="59" min="0">
+            <b><i class="answers" id="answer1"></i></b>
+            <script>
+                input1.oninput = function () {
+                    const min = Number(input1.value);
+                    console.log(min);
+                    document.getElementById("answer1").style.color = "green";
+                    document.getElementById("answer1").style.background = "white";
+                    document.getElementById("answer1").style.padding = "5px";
+                    if (min >= 0 && min <= 15) {
+                        document.getElementById("answer1").innerHTML = "Число поподпет в первую четверть";
+                    } else if (min >= 16 && min <= 30) {
+                        document.getElementById("answer1").innerHTML = "Число поподпет во вторую четверть";
+                    } else if (min >= 31 && min <= 45) {
+                        document.getElementById("answer1").innerHTML = "Число поподпет в третью четверть";
+                    } else if (min >= 46 && min <= 59) {
+                        document.getElementById("answer1").innerHTML = "Число поподпет в четвертую четверть";
+                    } else if (min == '') {
+                        document.getElementById("answer1").style.color = 'red';
+                        document.getElementById("answer1").innerHTML = "Поле не может быть пустым!";
+                    } else if (min >= 60 || min <= 0) {
+                        document.getElementById("answer1").style.color = 'red';
+                        document.getElementById("answer1").innerHTML = "Введите значение в пределах от 0 до 59!";
+                    } else {
+                        document.getElementById("answer1").innerHTML = "";
+                    }
+                }
+            </script>
+        </div>
+        <div class="task">
+            <h3>Задание 2</h3>
+            <p>Если переменная <b>a</b> равна 'test', то выведите 'Верно', иначе выведите 'Неверно'. Проверьте работу
+                скрипта при a, равном 'test', 'тест', 3. </p>
+            <br>
+
+
+            <label for="task2">Введите значение: </label><input id="input2" placeholder="test" type="text" name="task2">
+            <b><i class="answers" id="answer2"></i></b>
+
+            <script>
+                input2.oninput = function () {
+                    answer2.style.color = "green";
+                    answer2.style.background = "white";
+                    answer2.style.padding = "5px";
+                    const a = input2.value;
+                    console.log(a);
+
+                    if (a == 'test' || a == 'тест' || a == 'Test' || a == 'Тест') {
+                        answer2.innerHTML = "Верно";
+                    } else if (a == '') {
+                        answer2.style.color = 'red';
+                        answer2.innerHTML = "Поле не может быть пустым!";
+                    } else {
+                        answer2.innerHTML = "Неверно";
+                    }
+                };
+            </script>
+        </div>
+        <div class="task">
+            <h3>Задание 3</h3>
+            <p>Дана строка, состоящая из символов, например, 'abcde'. Проверьте, что первым символом этой строки
+                является буква 'a'. Если это так - выведите 'да', в противном случае выведите 'нет'.</p>
+            <br>
+
+            <label for="task3">Введите строку: </label><input id="input3" placeholder="abcde" type="text" name="task3">
+            <b><i class="answers" id="answer3"></i></b>
+            <script>
+                input3.oninput = function () {
+                    document.getElementById("answer3").style.color = "green";
+                    document.getElementById("answer3").style.background = "white";
+                    document.getElementById("answer3").style.padding = "5px";
+                    let a = input3.value;
+                    console.log(a);
+                    if (a[0] == 'a') {
+                        document.getElementById("answer3").innerHTML = "Да";
+                    } else if (a == '') {
+                        document.getElementById("answer3").style.color = 'red';
+                        document.getElementById("answer3").innerHTML = "Поле не может быть пустым!";
+                    } else {
+                        document.getElementById("answer3").innerHTML = "Нет";
+                    }
+                };
+            </script>
+        </div>
+        <div class="task">
+            <h3>Задание 4</h3>
+            <p>Дана строка с цифрами, например, '12345'. Проверьте, что первым символом этой строки является цифра 1, 2
+                или 3 <br>Если это так - выведите 'да', в противном случае выведите 'нет'.</p>
+            <br>
+
+            <label for="task4">Введите строку: </label><input id="input4" placeholder="12345" type="text" name="task4">
+            <b><i class="answers" id="answer4"></i></b>
+            <script>
+                input4.oninput = function () {
+                    document.getElementById("answer4").style.color = "green";
+                    document.getElementById("answer4").style.background = "white";
+                    document.getElementById("answer4").style.padding = "5px";
+                    let a = input4.value;
+                    console.log(a);
+                    if (a[0] == '1' && a[1] == '2' && a[2] == '3') {
+                        document.getElementById("answer4").innerHTML = "Да";
+                    } else if (a == '') {
+                        document.getElementById("answer4").style.color = 'red';
+                        document.getElementById("answer4").innerHTML = "Поле не может быть пустым!";
+                    } else {
+                        document.getElementById("answer4").innerHTML = "Нет";
+                    }
+                };
+            </script>
+        </div>
+        <div class="task">
+            <h3>Задание 5</h3>
+            <p>Выведите столбец четных чисел в промежутке от 0 до 100.</p>
+            <br>
+            <input onclick="task5()" type="button" value="Задание 5">
+
+        </div>
+
+        <div class="task">
+            <h3>Задание 6</h3>
+            <p>С помощью цикла найдите сумму чисел от 1 до 100.</p>
+            <br>
+            <input onclick="task6()" type="button" value="Задание 6">
+
+        </div>
+
+        <div class="task">
+            <h3>Задание 7</h3>
+            <p>Напишите скрипт, который будет находить факториал числа.Скрипт работает при нажатии на кнопку.</p>
+            <br>
+            <label for="task7">Введите значение</label><input type="number" name="task7" id="input7"><button
+                onclick="task7()">Найти факториал</button>
+            <b><i class="answers" id="answer7"></i></b>
+        </div>
+
+        <div class="task">
+            <h3>Задание 8</h3>
+            <p>Дан массив [3, 4, 1, 2, 7]. Отсортируйте его.</p>
+            <br>
+
+            <label for="task8">Вводите числа через пробел: </label><input id="task8" placeholder="3 4 1 2 7" type="text" name="task8">
+            <b><i class="answers" id="answer8"></i></b>
+            <script>
+                task8.oninput = function () {
+                    document.getElementById("answer8").style.color = "green";
+                    document.getElementById("answer8").style.background = "white";
+                    document.getElementById("answer8").style.padding = "5px";
+                    let a = task8.value.split(' ').sort();
+                    console.log(a);
+                    document.getElementById("answer8").innerHTML = a;
+                    console.log(a);
+                };
+            </script>
+        </div>
+
+    </div>
+
+    <abbr title="Sorry for the very bad design">
+        <div class="get-top"><a href="#head"><img src="/img/Без названия.png" alt="Вверх"></a></div>
+    </abbr>
+    <script src="/js/sc1.js"></script>
+</body>
+
+</html>

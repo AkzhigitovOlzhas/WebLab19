@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 lab</title>
+    <link rel="stylesheet" href="/css/1lab.css">
+    <link rel="stylesheet" href="/css/2lab.css">
+    <link rel="stylesheet" href="/css/slyder.css">
+</head>
+
+<body>
+    <div class="header-block" id="H">
+        <p class="text-name">18 лабараторная работа</p>
+    </div>
+    <div class="tasks">
+
+        <div class="task">
+            <h3>Задание 1</h3>
+            <p>Проверьте, что строка начинается на http://. </p>
+            <label for="task">Введите число: </label><input id="input1" placeholder="https://qna.habr.com/" "
+                name=" task1" max="59" min="0">
+            <b><i class="answers" id="answer1"></i></b>
+            <script>
+                input1.oninput = function () {
+                    const a = input1.value;
+                    if (a[0] == 'h' && a[1] == 't' && a[2] == 't' && a[3] == 'p' && a[4] == ':' && a[5] == '/' && a[6] == '/') {
+                        answer1.style.background = "white";
+                        answer1.style.color = "green";
+                        answer1.innerHTML = "True";
+                    } else {
+                        answer1.style.background = "white";
+                        answer1.style.color = "red";
+                        answer1.innerHTML = "False";
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="task">
+            <h3>Задание 2</h3>
+            <p>При нажатии на кнопку текст становится <span id="textStrong" class=""> жирным</span>.</p>
+            <input onclick="task2()" type="button" value="Click">
+
+        </div>
+        <div class="task">
+            <h3>Задание 3</h3>
+            <p>Выведите на экран количество секунд, которое осталось до конца дня.</p>
+            <b><i class="answers" id="answer3" onload="task3"></i></b>
+        </div>
+
+        <div class="task">
+            <h3>Задание 4</h3>
+            <p>Создайте инпут, в который пользователь вводит дату своего рождения в формате <br>'2014-12-31' (с
+                конкретным годом). По потери фокуса выведите под инпутом сколько дней осталось до его дня рождения.
+                Воспользуйтесь методом Date.parse.</p>
+
+            <input type="text" onchange="task4()" id="task4">
+            <b><i class="answers" id="answer4" onload="task4"></i></b>
+        </div>
+        <div class="task hhh">
+            <h3>Задание 5</h3>
+            <p>Создайте отсчет с кнопкой остановки с помощью таймер.</p>
+
+            <div class="timer">
+                <div class="time">
+                    <p class="t1">00:00:00</p>
+                </div>
+                <button id="start" onclick="startTimer()">
+                    Start
+                </button>
+            </div>
+
+        </div>
+        <div class="task sld">
+            <h1>Задание 6</h1>
+            <p>Создайте карусель, меняющихся картинок с помощью таймер.</p>
+            <ul id="slides">
+                <li class="slide showing"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                </ul>
+        </div>
+        <div class="task">
+            <h3>Задание 7</h3>
+            <p>Дан инпут. Ведите в него город, например, Бишкек. Сохраните его в куки. Зайдя на другую страницу сайта вы должны увидеть фразу 'ваш город - Бишкек'. (работа с куки). Самостоятельная тема..</p>
+            <input id="cookieInput" type="text" onchange="checkCookie()" placeholder="Бишкек">
+            <a href="/lab-pages/cookie.html"><input type="button" value="Перейти на другую страницу"></a>
+        </div>
+    </div>
+
+    <abbr title="Sorry for the very bad design">
+        <div class="get-top"><a href="#H"><img src="/img/Без названия.png" alt="Вверх"></a></div>
+    </abbr>
+    <script src="/js/sc2.js"></script>
+    <script src="/js/slyder.js"></script>
+    <script src="/js/cook.js"></script>
+</body>
+
+</html>

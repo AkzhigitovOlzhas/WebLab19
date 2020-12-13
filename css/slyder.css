@@ -1,0 +1,44 @@
+#slides{
+    position: relative;
+    height: 500px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    }
+    
+    .slide{
+    position: absolute;
+    left: 100px;
+    top: 0px;
+    width: 80%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    background-size: 100%;
+    }
+    
+    .showing{
+    opacity: 1;
+    z-index: 2;
+    }
+
+    .slide:nth-of-type(1){
+   background-image: url(https://natworld.info/wp-content/uploads/2018/04/Sochinenie-na-temu-Priroda-v-ijune-900x500.jpg);
+    }
+    .slide:nth-of-type(2){
+    background-image: url(https://online-teacher.ru/image/english/priroda-2.jpg);
+    }
+    .slide:nth-of-type(3){
+background-image: url(https://gdb.rferl.org/777C4431-C718-4090-81FC-121EF37FDC14_cx0_cy2_cw0_w1200_r1.jpg);
+    }
+    .slide:nth-of-type(4){
+    background-image: url(https://lim-english.com/uploads/images/all/topics/nature.jpg);
+    }
+    .slide:nth-of-type(5){
+    background-image: url(https://sputnik.kg/images/104667/06/1046670622.jpg);
+    }
